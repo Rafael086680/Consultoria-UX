@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Missinha Wirecats UX - Design de Interfaces</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Fontes do projeto: DM Sans para o corpo e o título do texto -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ============================================================
+       CABEÇALHO E NAVEGAÇÃO PRINCIPAL
+       Fixo no topo com efeito de blur para manter visibilidade
+       ao rolar a página.
+  ============================================================ -->
+  <header class="site-header">
+    <div class="header-inner">
+
+      <!-- Logo do projeto -->
+      <div class="logo">
+        <span class="logo-bracket">[</span>UX<span class="logo-bracket">]</span>
+        <span class="logo-sub">Missinha Wirecats</span>
+      </div>
+
+      <!-- Menu de navegação principal com links para cada seção -->
+      <nav class="main-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#teoria">Base Teórica</a></li>
+          <li><a href="#cores">Cores</a></li>
+          <li><a href="#tipografia">Tipografia</a></li>
+          <li><a href="#heuristicas">Heurísticas</a></li>
+          <li><a href="#estudo-caso">Estudo de Caso</a></li>
+          <li><a href="#site-ruim" class="nav-badge ruim">Site Ruim</a></li>
+          <li><a href="#site-bom" class="nav-badge bom">Site Bom</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         SEÇÃO HERO (APRESENTAÇÃO)
+         Bloco de entrada do site com título, descrição e chamada
+         para ação. Inclui decoração visual animada no fundo.
+    ============================================================ -->
+    <section class="hero" aria-label="Apresentação">
+
+      <div class="hero-content">
+        <p class="hero-eyebrow">Consultoria de UX · 2026</p>
+        <h1 class="hero-title">
+          <span class="line-1">Missinha Wirecats</span>
+        </h1>
+        <p class="hero-description">
+          Um guia completo sobre design de interfaces.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SEÇÃO A — INTRODUÇÃO: BASE TEÓRICA
+         Apresenta o conteúdo que será desenvolvido nas
+         subseções seguintes: cores, tipografia e heurísticas.
+    ============================================================ -->
+    <section id="teoria" class="section-intro">
+      <div class="container">
+        <div class="section-label">Seção A</div>
+        <h2 class="section-title">A Base Teórica</h2>
+        <p class="section-lead">
+          Antes de auditar qualquer interface, precisamos entender os pilares que sustentam o bom design.
+          Cores, tipografia e heurísticas formam o alicerce de toda experiência do usuário bem-sucedida.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SEÇÃO — PSICOLOGIA DAS CORES
+         Explica o impacto emocional e funcional de cada cor
+         no design de interfaces, com exemplos de uso real.
+    ============================================================ -->
+    <section id="cores" class="section-cores">
+      <div class="container">
+        <div class="section-label">A.1</div>
+        <h2 class="section-title">Psicologia das Cores</h2>
+        <p class="section-lead">
+          As cores não são neutras. Elas comunicam, evocam emoções e influenciam diretamente como o usuário
+          percebe e interage com uma interface. Entender esse fenômeno é essencial para projetar experiências intencionais.
+        </p>
+
+        <!-- Grade de cards de cores — cada card usa variáveis CSS para aplicar a cor dinamicamente -->
+        <div class="cores-grid">
+
+          <article class="cor-card" style="--cor: #E63946; --cor-bg: #fff0f0;">
+            <div class="cor-swatch"></div>
+            <div class="cor-info">
+              <h3>Vermelho</h3>
+              <p>Urgência, perigo, paixão e energia. Utilizado em botões de alerta, promoções relâmpago e chamadas à ação que exigem atenção imediata. Em excesso, causa ansiedade e cansaço visual.</p>
+              <div class="cor-exemplos"><span>CTAs</span><span>Alertas</span><span>Erros</span></div>
+            </div>
+          </article>
+
+          <article class="cor-card" style="--cor: #2563EB; --cor-bg: #eff6ff;">
+            <div class="cor-swatch"></div>
+            <div class="cor-info">
+              <h3>Azul</h3>
+              <p>Confiança, segurança, profissionalismo e calma. É a cor dominante em bancos, redes sociais e sistemas corporativos (Tipo o Linkedin). Transmite credibilidade e estabilidade ao usuário.</p>
+              <div class="cor-exemplos"><span>Bancos</span><span>Tech</span><span>Links</span></div>
+            </div>
+          </article>
+
+          <article class="cor-card" style="--cor: #16A34A; --cor-bg: #f0fdf4;">
+            <div class="cor-swatch"></div>
+            <div class="cor-info">
+              <h3>Verde</h3>
+              <p>Sucesso, natureza, saúde e permissão. Associado a confirmações, transações bem-sucedidas e sustentabilidade. Reduz o estresse do usuário em momentos de decisão.</p>
+              <div class="cor-exemplos"><span>Sucesso</span><span>Saúde</span><span>Finanças</span></div>
+            </div>
+          </article>
+
+          <article class="cor-card" style="--cor: #D97706; --cor-bg: #fffbeb;">
+            <div class="cor-swatch"></div>
+            <div class="cor-info">
+              <h3>Amarelo/Laranja</h3>
+              <p>Otimismo, criatividade e calor. Atrai atenção sem criar a tensão do vermelho. Muito usado em e-commerces e aplicativos de delivery para transmitir energia e acessibilidade.</p>
+              <div class="cor-exemplos"><span>E-commerce</span><span>Delivery</span><span>Avisos</span></div>
+            </div>
+          </article>
+
+          <article class="cor-card" style="--cor: #7C3AED; --cor-bg: #f5f3ff;">
+            <div class="cor-swatch"></div>
+            <div class="cor-info">
+              <h3>Roxo</h3>
+              <p>Luxo, criatividade, mistério e espiritualidade. Frequentemente associado a produtos premium, plataformas criativas e marcas que querem se posicionar como únicas ou sofisticadas.</p>
+              <div class="cor-exemplos"><span>Luxo</span><span>Criativo</span><span>Premium</span></div>
+            </div>
+          </article>
+
+          <article class="cor-card" style="--cor: #111827; --cor-bg: #f9fafb;">
+            <div class="cor-swatch"></div>
+            <div class="cor-info">
+              <h3>Preto &amp; Branco</h3>
+              <p>Elegância, simplicidade e clareza. A dupla clássica do design editorial — o contraste máximo garante legibilidade e cria uma sensação de sofisticação atemporal quando bem aplicada.</p>
+              <div class="cor-exemplos"><span>Editorial</span><span>Moda</span><span>Luxo</span></div>
+            </div>
+          </article>
+
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SEÇÃO — TIPOGRAFIA
+         Diferencia fontes serifadas de sem-serifa e apresenta
+         o conceito de hierarquia tipográfica com exemplos visuais.
+    ============================================================ -->
+    <section id="tipografia" class="section-tipografia">
+      <div class="container">
+        <div class="section-label">A.2</div>
+        <h2 class="section-title">Tipografia</h2>
+        <p class="section-lead">
+          Se a cor fala ao emocional, a tipografia fala ao racional. A escolha certa de fonte, tamanho e espaçamento
+          determina se o usuário vai ler — ou vai embora.
+        </p>
+
+        <!-- Comparação visual entre fontes serifadas e sem-serifa -->
+        <div class="tipo-grid">
+
+          <div class="tipo-card">
+            <div class="tipo-demo serif-demo">
+              <span class="tipo-letra">Aa</span>
+              <span class="tipo-nome">Com Serifa</span>
+            </div>
+            <div class="tipo-desc">
+              <h3>Fontes Serifadas</h3>
+              <p>As serifas são os pequenos "pés" nas extremidades das letras. Criadas para guiar o olho em textos longos impressos, transmitem tradição, autoridade e seriedade. Exemplos: <em>Georgia, Merriweather, Playfair Display</em>.</p>
+              <p>Ideais para: jornais digitais, blogs, conteúdo editorial e marcas que querem transmitir credibilidade clássica.</p>
+            </div>
+          </div>
+
+          <div class="tipo-card">
+            <div class="tipo-demo sans-demo">
+              <span class="tipo-letra">Aa</span>
+              <span class="tipo-nome">Sem Serifa</span>
+            </div>
+            <div class="tipo-desc">
+              <h3>Fontes Sem Serifa (Sans-Serif)</h3>
+              <p>Limpas, modernas e altamente legíveis em telas. São o padrão da web moderna, especialmente em interfaces digitais onde a clareza é prioridade. Exemplos: <em>DM Sans, Syne, Poppins, Nunito</em>.</p>
+              <p>Ideais para: aplicativos, dashboards, SaaS, interfaces mobile e qualquer contexto onde a leitura rápida é essencial.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Demonstração de hierarquia tipográfica: do H1 ao caption -->
+        <div class="tipo-hierarquia">
+          <h3>Hierarquia Tipográfica</h3>
+          <p class="tipo-hier-intro">Uma boa hierarquia guia o olhar do usuário naturalmente, do mais importante ao detalhe.</p>
+          <div class="hier-exemplos">
+            <div class="hier-item">
+              <div class="hier-tag">H1 — 48px</div>
+              <div class="hier-text h1-ex">Título Principal</div>
+            </div>
+            <div class="hier-item">
+              <div class="hier-tag">H2 — 32px</div>
+              <div class="hier-text h2-ex">Seção Secundária</div>
+            </div>
+            <div class="hier-item">
+              <div class="hier-tag">H3 — 22px</div>
+              <div class="hier-text h3-ex">Subtítulo de Conteúdo</div>
+            </div>
+            <div class="hier-item">
+              <div class="hier-tag">Body — 16px</div>
+              <div class="hier-text body-ex">Texto corrido com espaçamento adequado para leitura confortável em telas.</div>
+            </div>
+            <div class="hier-item">
+              <div class="hier-tag">Caption — 12px</div>
+              <div class="hier-text caption-ex">Legenda, metadado, informação de suporte</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SEÇÃO — 10 HEURÍSTICAS DE NIELSEN
+         Apresenta cada uma das 10 heurísticas com explicação
+         e exemplo prático de aplicação em interfaces reais.
+    ============================================================ -->
+    <section id="heuristicas" class="section-heuristicas">
+      <div class="container">
+        <div class="section-label">A.3</div>
+        <h2 class="section-title">10 Heurísticas de Nielsen</h2>
+        <p class="section-lead">
+          Jakob Nielsen definiu 10 princípios fundamentais para o design de interfaces. Não são regras rígidas,
+          mas diretrizes baseadas em décadas de observação do comportamento humano com tecnologia.
+        </p>
+
+        <!-- Grade com os 10 cards de heurísticas -->
+        <div class="heuristicas-grid">
+
+          <article class="heuristica-card">
+            <div class="h-numero">01</div>
+            <div class="h-body">
+              <h3>Visibilidade do Status do Sistema</h3>
+              <p>O sistema deve sempre informar ao usuário o que está acontecendo. Seja um carregamento, uma confirmação ou um erro. Nada de deixar o usuário no escuro.</p>
+              <div class="h-exemplo">Ex: Barra de progresso de upload, mensagem "Enviado com sucesso!"</div>
+            </div>
+          </article>
+
+          <article class="heuristica-card">
+            <div class="h-numero">02</div>
+            <div class="h-body">
+              <h3>Correspondência com o Mundo Real</h3>
+              <p>Use linguagem e conceitos familiares ao usuário, não jargão técnico. Ícones, metáforas e fluxos devem refletir a realidade que o usuário já conhece.</p>
+              <div class="h-exemplo">Ex: Ícone de "lixeira" para deletar, "pasta" para organizar arquivos.</div>
+            </div>
+          </article>
+
+          <article class="heuristica-card">
+            <div class="h-numero">03</div>
+            <div class="h-body">
+              <h3>Controle e Liberdade do Usuário</h3>
+              <p>Usuários cometem erros. Eles precisam de "saídas de emergência" claras: desfazer, refazer, cancelar. Nunca prenda o usuário em um caminho sem volta.</p>
+              <div class="h-exemplo">Ex: Botão "Desfazer envio" do Gmail, confirmação antes de excluir.</div>
+            </div>
+          </article>
+
+          <article class="heuristica-card">
+            <div class="h-numero">04</div>
+            <div class="h-body">
+              <h3>Consistência e Padrões</h3>
+              <p>Palavras, situações e ações iguais devem se comportar de forma igual em todo o sistema. O usuário não deve precisar adivinhar se coisas diferentes significam a mesma coisa.</p>
+              <div class="h-exemplo">Ex: Sempre usar "Salvar", nunca intercalar com "Gravar" ou "Confirmar".</div>
+            </div>
+          </article>
+
+          <article class="heuristica-card">
+            <div class="h-numero">05</div>
+            <div class="h-body">
+              <h3>Prevenção de Erros</h3>
+              <p>Melhor do que uma boa mensagem de erro é um design que previne o problema antes que ele aconteça. Elimine condições propensas a erros ou avise o usuário antes da ação.</p>
+              <div class="h-exemplo">Ex: Confirmação "Tem certeza que deseja excluir?", validação em tempo real em formulários.</div>
+            </div>
+          </article>
+
+          <article class="heuristica-card">
+            <div class="h-numero">06</div>
+            <div class="h-body">
+              <h3>Reconhecer em vez de Lembrar</h3>
+              <p>O usuário não deve precisar memorizar informações de uma parte da interface para usar outra. Deixe opções, objetos e ações visíveis e acessíveis.</p>
+              <div class="h-exemplo">Ex: Histórico de pesquisas recentes, campos preenchidos automaticamente.</div>
+            </div>
+          </article>
+
+          <article class="heuristica-card">
+            <div class="h-numero">07</div>
+            <div class="h-body">
+              <h3>Flexibilidade e Eficiência de Uso</h3>
+              <p>Atalhos - invisíveis para o novato, aceleram a vida do usuário experiente. O sistema deve atender bem tanto quem usa pela primeira vez quanto quem usa todo dia.</p>
+              <div class="h-exemplo">Ex: Atalhos de teclado (Ctrl+S), gestos em mobile, customização de fluxos.</div>
+            </div>
+          </article>
+
+          <article class="heuristica-card">
+            <div class="h-numero">08</div>
+            <div class="h-body">
+              <h3>Design Estético e Minimalista</h3>
+              <p>Cada elemento extra compete por atenção com os elementos relevantes. Diálogos não devem conter informação irrelevante ou raramente necessária. Menos é mais.</p>
+              <div class="h-exemplo">Ex: Google.com - uma caixa de busca, dois botões. Isso é tudo que precisa ser.</div>
+            </div>
+          </article>
+
+          <article class="heuristica-card">
+            <div class="h-numero">09</div>
+            <div class="h-body">
+              <h3>Ajudar a Reconhecer, Diagnosticar e Corrigir Erros</h3>
+              <p>Mensagens de erro devem ser em linguagem simples, indicar claramente o problema e sugerir uma solução. Nada de códigos genéricos como "Erro 404" sem explicação.</p>
+              <div class="h-exemplo">Ex: "Senha incorreta. Tente novamente ou clique em 'Esqueci minha senha'."</div>
+            </div>
+          </article>
+
+          <article class="heuristica-card">
+            <div class="h-numero">10</div>
+            <div class="h-body">
+              <h3>Ajuda e Documentação</h3>
+              <p>Mesmo que o sistema seja fácil de usar, pode ser necessário fornecer ajuda. Ela deve ser fácil de encontrar, focada na tarefa do usuário, com passos concretos e não muito extensa.</p>
+              <div class="h-exemplo">Ex: Tooltip contextual, FAQ acessível pelo menu, busca na documentação.</div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SEÇÃO B — INTRODUÇÃO: ESTUDO DE CASO
+         Transição para a parte prática do trabalho, onde as
+         heurísticas são aplicadas em análise de sites reais.
+    ============================================================ -->
+    <section id="estudo-caso" class="section-intro dark">
+      <div class="container">
+        <div class="section-label">Seção B</div>
+        <h2 class="section-title">Estudo de Caso</h2>
+        <p class="section-lead">
+          Teoria sem prática é só abstração. Agora aplicamos as heurísticas de Nielsen em dois sites reais,
+          um que falha em quase tudo, e outro que serve de referência para o que o bom design pode ser.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SEÇÃO B.1 — SITE RUIM: ARNGREN.NET
+         Auditoria de um site com múltiplas violações de heurísticas.
+         Inclui print (placeholder), lista de violações e análise
+         emocional da experiência do usuário.
+    ============================================================ -->
+    <section id="site-ruim" class="section-site-ruim">
+      <div class="container">
+
+        <!-- Cabeçalho do estudo de caso com badge, título e link -->
+        <div class="case-header ruim">
+          <div class="case-badge">Site Ruim</div>
+          <h2>Arngren.net</h2>
+          <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwjTsaz36tKUAxXeLbkGHZPFCFAQFnoECA8QAQ&url=http%3A%2F%2Farngren.net%2F&usg=AOvVaw3eeREMR3tkuR8fpbxXhEEg&opi=89978449" target="_blank" rel="noopener" class="case-link">arngren.net →</a>
+          <p class="case-desc">Loja virtual norueguesa que vende de tudo. Um dos exemplos mais citados no mundo do design como o que <em>não</em> fazer.</p>
+        </div>
+
+        <!-- Área para inserir o print de tela do site -->
+        <div class="screenshot-area ruim-screenshot">
+          <div class="screenshot-placeholder">
+            <div class="screenshot-icon"></div>
+            <p class="screenshot-note"><img src="assets/arngren.png"></p>
+          </div>
+        </div>
+
+        <!-- Auditoria dividida em heurísticas violadas e atendidas -->
+        <div class="auditoria-section">
+          <h3>Auditoria de Heurísticas</h3>
+
+          <div class="auditoria-grid">
+
+            <!-- Coluna das heurísticas que o site VIOLOU -->
+            <div class="auditoria-col fail">
+              <div class="col-header">
+                <h4>Heurísticas Violadas</h4>
+              </div>
+              <ul class="auditoria-list">
+                <li>
+                  <strong>H8 - Design Minimalista:</strong>
+                  A página inicial é um caos visual absoluto. Centenas de produtos, imagens, preços e textos disputam atenção simultaneamente. Não há hierarquia visual nenhuma, tudo grita ao mesmo tempo.
+                </li>
+                <li>
+                  <strong>H1 - Visibilidade do Status:</strong>
+                  Não há feedback claro ao adicionar itens ao carrinho ou realizar qualquer ação. O usuário fica sem saber se o clique funcionou.
+                </li>
+                <li>
+                  <strong>H4 - Consistência e Padrões:</strong>
+                  Fontes, tamanhos, cores e layouts mudam de bloco para bloco sem critério. Parece que cada seção foi feita por uma pessoa diferente, sem comunicação.
+                </li>
+                <li>
+                  <strong>H7 - Flexibilidade e Eficiência:</strong>
+                  Não há busca funcional clara, filtros ou categorias organizadas. Encontrar um produto específico exige rolar páginas inteiras de conteúdo desorganizado.
+                </li>
+                <li>
+                  <strong>H2 - Correspondência com o Mundo Real:</strong>
+                  A organização da loja não corresponde a nenhuma lógica que um usuário esperaria. Produtos aleatórios aparecem misturados sem categorias claras.
+                </li>
+              </ul>
+            </div>
+
+            <!-- Coluna das heurísticas que o site ATENDEU -->
+            <div class="auditoria-col pass">
+              <div class="col-header">
+                <h4>Heurísticas Atendidas</h4>
+              </div>
+              <ul class="auditoria-list">
+                <li>
+                  <strong>H3 - Controle do Usuário:</strong>
+                  Existe um botão de voltar ao topo e links de navegação básicos. O usuário não fica completamente perdido sem saída.
+                </li>
+                <li>
+                  <strong>H10 - Ajuda e Documentação:</strong>
+                  Há informações de contato e dados da empresa visíveis, ainda que enterrados no meio do caos visual.
+                </li>
+                <li>
+                  <strong>H9 - Recuperação de Erros:</strong>
+                  O site ao menos exibe mensagens básicas de produto não encontrado, evitando erros silenciosos.
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Análise do impacto emocional na experiência do usuário -->
+        <div class="analise-emocional ruim-emocional">
+          <h3>🫠 Análise Emocional</h3>
+          <p>
+            Abrir o Arngren.net é como entrar em um bazar lotado onde alguém jogou todos os produtos no chão sem qualquer ordem.
+            A primeira sensação é de <strong>sobrecarga cognitiva imediata</strong>, os olhos não sabem para onde olhar porque tudo tem
+            o mesmo peso visual. Em segundos, surge uma leve <strong>ansiedade</strong>: "Existe alguma lógica aqui? Como vou encontrar o que preciso?"
+            Depois de rolar a página por alguns segundos, o <strong>cansaço visual</strong> toma conta, cores, tamanhos e estilos misturados sem critério
+            esgotam a percepção. A experiência termina em <strong>frustração e desistência</strong>. Não por falta de produto, mas por falta de respeito
+            pelo tempo e pela atenção do usuário.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SEÇÃO B.2 - SITE BOM: steam
+         Auditoria de um site referência em design de produto.
+         Inclui print (placeholder), lista de boas práticas e
+         análise emocional positiva da experiência do usuário.
+    ============================================================ -->
+    <section id="site-bom" class="section-site-bom">
+      <div class="container">
+
+        <!-- Cabeçalho do estudo de caso com badge, título e link -->
+        <div class="case-header bom">
+          <div class="case-badge">✓ Site Bom</div>
+          <h2>Steam</h2>
+          <a href="https://store.steampowered.com/?l=portuguese" target="_blank" rel="noopener" class="case-link"></a>
+          <p class="case-desc">Principal plataforma digital do mundo para comprar, baixar e jogar jogos no computador</p>
+        </div>
+
+        <!-- Área para inserir o print de tela do site -->
+        <div class="screenshot-area bom-screenshot">
+          <div class="screenshot-placeholder">
+            <p class="screenshot-note"><img src="assets/steam.png"></p>
+          </div>
+        </div>
+
+        <!-- Auditoria dividida em heurísticas bem aplicadas e com ressalvas -->
+        <div class="auditoria-section">
+          <h3>Auditoria de Heurísticas</h3>
+
+          <div class="auditoria-grid">
+
+            <!-- Coluna das heurísticas BEM aplicadas -->
+            <div class="auditoria-col pass">
+              <div class="col-header">
+                <h4>Heurísticas Bem Aplicadas</h4>
+              </div>
+              <ul class="auditoria-list">
+                <li>
+                  <strong>H8 - Design Minimalista:</strong>
+                  A página inicial tem exatamente o necessário: proposta de valor clara, screenshots do produto e um CTA. Sem distrações, sem excesso. Cada pixel tem um propósito.
+                </li>
+                <li>
+                  <strong>H1 - Visibilidade do Status:</strong>
+                  O aplicativo exibe feedback em tempo real para cada ação: atalhos de teclado visíveis, animações suaves de confirmação, e estados de carregamento elegantes.
+                </li>
+                <li>
+                  <strong>H4 - Consistência e Padrões:</strong>
+                  Todo o design system é coerente — mesmas fontes, espaçamentos, cores e comportamentos em todas as telas. A experiência é previsível da melhor forma possível.
+                </li>
+                <li>
+                  <strong>H7 - Flexibilidade e Eficiência:</strong>
+                  A steam é famosa por seus atalhos de teclado extensos que permitem que usuários avançados naveguem sem usar o mouse. Ao mesmo tempo, é totalmente usável para novatos via clique.
+                </li>
+                <li>
+                  <strong>H3 - Controle do Usuário:</strong>
+                  Todas as ações têm desfazer. Exclusões exigem confirmação. O usuário nunca perde trabalho por acidente.
+                </li>
+                <li>
+                  <strong>H2 - Correspondência com o Mundo Real:</strong>
+                  Usa metáforas familiares do ambiente de trabalho (projetos, tarefas, ciclos) que os usuários já conhecem.
+                </li>
+              </ul>
+            </div>
+
+            <!-- Coluna das heurísticas com ressalvas ou pontos de atenção -->
+            <div class="auditoria-col neutro">
+              <div class="col-header">
+                <h4>Heurísticas com Ressalvas</h4>
+              </div>
+              <ul class="auditoria-list">
+                <li>
+                  <strong>H10 - Ajuda e Documentação:</strong>
+                  A documentação existe e é excelente, mas está separada do produto. Dentro do app, há poucos tooltips ou onboarding guiado para novos usuários, o que pode ser uma barreira para quem não tem experiência com ferramentas de gestão.
+                </li>
+                <li>
+                  <strong>H6 - Reconhecer em vez de Lembrar:</strong>
+                  A quantidade de atalhos de teclado disponíveis é tão grande que o usuário acaba precisando memorizar os principais. Há um menu de atalhos acessível, mas ele requer que o usuário já saiba que ele existe.
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Análise do impacto emocional na experiência do usuário -->
+        <div class="analise-emocional bom-emocional">
+          <h3>Análise Emocional</h3>
+          <p>
+            Acessar a Steam é uma experiência de <strong>clareza imediata</strong>. A página de apresentação comunica em segundos o que o produto é e por que vale a pena, sem confusão.
+            Ao explorar o produto, a sensação predominante é de <strong>confiança</strong>: a interface é tão consistente e previsível que o usuário rapidamente passa a confiar no sistema.
+            Cada animação, cada micro-interação foi pensada para ser fluida sem chamar atenção para si mesma.
+            O resultado é uma sensação de <strong>competência</strong> onde o usuário se sente mais capaz, não sobrecarregado pelo software.
+            É o tipo de produto que faz o trabalho parecer menos trabalho.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       RODAPÉ
+       Contém o logo, links de navegação rápida e a lista
+       dos integrantes da equipe responsável pelo trabalho.
+  ============================================================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Identidade do projeto -->
+        <div class="footer-brand">
+          <div class="logo">
+            <span class="logo-bracket">[</span>UX<span class="logo-bracket">]</span>
+            <span class="logo-sub">Missinha Wirecats</span>
+          </div>
+          <p>Trabalho N2 - Consultoria em Experiência do Usuário</p>
+        </div>
+
+        <!-- Links de navegação rápida para cada seção -->
+        <div class="footer-nav">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#cores">Psicologia das Cores</a></li>
+            <li><a href="#tipografia">Tipografia</a></li>
+            <li><a href="#heuristicas">Heurísticas de Nielsen</a></li>
+            <li><a href="#site-ruim">Site Ruim - Arngren</a></li>
+            <li><a href="#site-bom">Site Bom - Steam</a></li>
+          </ul>
+        </div>
+
+        <!-- Lista dos integrantes da equipe -->
+        <div class="footer-equipe">
+          <h4>Equipe</h4>
+          <ul class="equipe-lista">
+            <li>Rafael Rodrigues Antonio</li>
+            <li>Lorenzo Makdesi </li>
+            <li>Arthur Andrade</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+      COMPORTAMENTOS INTERATIVOS
+       1. Destaca o link ativo na navegação conforme a seção
+          visível na tela, usando a API IntersectionObserver.
+  ============================================================ -->
+  <script>
+
+    // 1. Navegação ativa: observa quais seções estão visíveis na viewport
+    //    e adiciona a classe "active" no link correspondente do menu
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.main-nav a');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => link.classList.remove('active'));
+          const active = document.querySelector(`.main-nav a[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { threshold: 0.3 });
+
+    sections.forEach(s => observer.observe(s));
+  </script>
+
+</body>
+</html>
