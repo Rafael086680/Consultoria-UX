@@ -3,7 +3,7 @@
    Zera margens, paddings e define box-sizing para todos os
    elementos, garantindo consistência entre navegadores.
 */
-*, *::before, *::after {
+*, *::before, *::after{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -14,7 +14,7 @@
    Centraliza todas as cores, fontes, espaçamentos, bordas e
    transições do projeto. Alterar aqui reflete em todo o site.
 */
-:root {
+:root{
   /* Paleta de cores de fundo */
   --clr-bg: #0d0d0d;
   --clr-bg-alt: #111111;
@@ -73,12 +73,12 @@
    Define rolagem suave com offset para o menu fixo,
    e aplica fonte, cor e fundo padrão ao documento.
 */
-html {
+html{
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
 }
 
-body {
+body{
   font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.65;
@@ -93,23 +93,23 @@ body {
  */
 
 /* Container centralizado com largura máxima */
-.container {
+.container{
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 var(--space-lg);
 }
 
-img {
+img{
   max-width: 100%;
   display: block;
 }
 
-a {
+a{
   color: inherit;
   text-decoration: none;
 }
 
-ul {
+ul{
   list-style: none;
 }
 
@@ -118,7 +118,7 @@ ul {
    Fixo no topo com backdrop-filter para efeito de vidro fosco.
    Permanece visível durante toda a rolagem da página.
 */
-.site-header {
+.site-header{
   position: sticky;
   top: 0;
   z-index: 100;
@@ -129,7 +129,7 @@ ul {
 }
 
 /* Layout interno do cabeçalho: logo à esquerda, nav à direita */
-.header-inner {
+.header-inner{
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 var(--space-lg);
@@ -141,7 +141,7 @@ ul {
 }
 
 /* Logo com fonte display e colchetes coloridos */
-.logo {
+.logo{
   font-family: var(--font-display);
   font-weight: 800;
   font-size: 1.2rem;
@@ -152,11 +152,11 @@ ul {
   letter-spacing: -0.02em;
 }
 
-.logo-bracket {
+.logo-bracket{
   color: var(--clr-accent);
 }
 
-.logo-sub {
+.logo-sub{
   font-weight: 400;
   font-size: 0.85rem;
   color: var(--clr-text-muted);
@@ -164,14 +164,14 @@ ul {
 }
 
 /* Links de navegação em linha com espaçamento uniforme */
-.main-nav ul {
+.main-nav ul{
   display: flex;
   align-items: center;
   gap: var(--space-xs);
   flex-wrap: wrap;
 }
 
-.main-nav a {
+.main-nav a{
   font-size: 0.82rem;
   font-weight: 500;
   color: var(--clr-text-muted);
@@ -183,24 +183,24 @@ ul {
 
 /* Estado de hover e link ativo na seção atual */
 .main-nav a:hover,
-.main-nav a.active {
+.main-nav a.active{
   color: var(--clr-text);
   background-color: var(--clr-surface);
 }
 
 /* Badges coloridos para os links de estudo de caso */
-.main-nav .nav-badge {
+.main-nav .nav-badge{
   font-weight: 600;
   border-radius: 999px;
 }
 
-.main-nav .nav-badge.ruim {
+.main-nav .nav-badge.ruim{
   color: var(--clr-ruim);
   background-color: var(--clr-ruim-dim);
   border: 1px solid var(--clr-ruim-border);
 }
 
-.main-nav .nav-badge.bom {
+.main-nav .nav-badge.bom{
   color: var(--clr-bom);
   background-color: var(--clr-bom-dim);
   border: 1px solid var(--clr-bom-border);
@@ -211,7 +211,7 @@ ul {
    Ocupa quase toda a altura da tela com título grande,
    descrição e decoração animada no canto direito.
 */
-.hero {
+.hero{
   position: relative;
   min-height: 50vh;
   display: flex;
@@ -221,7 +221,7 @@ ul {
 }
 
 /* Conteúdo textual do hero: fica acima da decoração */
-.hero-content {
+.hero-content{
   position: relative;
   z-index: 2;
   max-width: 1100px;
@@ -231,7 +231,7 @@ ul {
 }
 
 /* Texto pequeno acima do título — categoria e ano */
-.hero-eyebrow {
+.hero-eyebrow{
   font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 0.15em;
@@ -242,7 +242,7 @@ ul {
 }
 
 /* Título principal com fonte display grande e responsiva */
-.hero-title {
+.hero-title{
   font-family: var(--font-display);
   font-weight: 800;
   font-size: clamp(4rem, 10vw, 9rem);
@@ -254,23 +254,23 @@ ul {
 }
 
 /* Animações escalonadas para cada linha do título */
-.hero-title .line-1 {
+.hero-title .line-1{
   color: var(--clr-text);
   animation: fadeUp 0.6s 0.1s ease both;
 }
 
-.hero-title .line-2 {
+.hero-title .line-2{
   color: var(--clr-text);
   animation: fadeUp 0.6s 0.2s ease both;
 }
 
-.hero-title .line-3 {
+.hero-title .line-3{
   color: var(--clr-accent);
   animation: fadeUp 0.6s 0.3s ease both;
 }
 
 /* Parágrafo descritivo com peso leve e largura máxima */
-.hero-description {
+.hero-description{
   font-size: 1.15rem;
   font-weight: 300;
   color: var(--clr-text-muted);
@@ -280,35 +280,22 @@ ul {
   animation: fadeUp 0.6s 0.4s ease both;
 }
 
-/* Grade de pontos com máscara radial para suavizar as bordas */
-.grid-dots {
-  position: absolute;
-  top: -300px;
-  right: -200px;
-  width: 600px;
-  height: 600px;
-  background-image: radial-gradient(circle, var(--clr-border) 1px, transparent 1px);
-  background-size: 30px 30px;
-  mask-image: radial-gradient(circle at center, black 30%, transparent 70%);
-  -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 70%);
-}
-
 /*
    SEÇÃO DE INTRODUÇÃO (INTRO)
    Usada como divisória entre blocos grandes de conteúdo.
    A variante ".dark" adiciona fundo levemente mais claro.
 */
-.section-intro {
+.section-intro{
   padding: var(--space-2xl) 0;
   border-bottom: 1px solid var(--clr-border);
 }
 
-.section-intro.dark {
+.section-intro.dark{
   background-color: var(--clr-surface);
 }
 
 /* Label de seção em maiúsculas e azuis (ex: "Seção A", "A.1") */
-.section-label {
+.section-label{
   font-family: var(--font-display);
   font-size: 0.7rem;
   font-weight: 700;
@@ -319,7 +306,7 @@ ul {
 }
 
 /* Título principal de seção com tamanho fluido e responsivo */
-.section-title {
+.section-title{
   font-family: var(--font-display);
   font-weight: 800;
   font-size: clamp(2rem, 5vw, 3.5rem);
@@ -330,7 +317,7 @@ ul {
 }
 
 /* Parágrafo introdutório com peso leve e largura controlada */
-.section-lead {
+.section-lead{
   font-size: 1.05rem;
   font-weight: 300;
   color: var(--clr-text-muted);
@@ -343,7 +330,7 @@ ul {
    Grade de cards com swatches coloridos, gerados dinamicamente
    via variáveis CSS inline (--cor e --cor-bg) no HTML.
 */
-.section-cores {
+.section-cores{
   padding: var(--space-2xl) 0;
   border-bottom: 1px solid var(--clr-border);
 }
@@ -354,19 +341,19 @@ ul {
 .section-tipografia .section-label,
 .section-tipografia .section-title,
 .section-heuristicas .section-label,
-.section-heuristicas .section-title {
+.section-heuristicas .section-title{
   margin-bottom: var(--space-sm);
 }
 
 /* Margem maior abaixo do texto introdutório */
 .section-cores .section-lead,
 .section-tipografia .section-lead,
-.section-heuristicas .section-lead {
+.section-heuristicas .section-lead{
   margin-bottom: var(--space-xl);
 }
 
 /* Grade responsiva de cards de cores */
-.cores-grid {
+.cores-grid{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: var(--space-md);
@@ -374,7 +361,7 @@ ul {
 }
 
 /* Card individual de cor com fundo claro e borda sutil */
-.cor-card {
+.cor-card{
   background-color: var(--cor-bg, var(--clr-surface));
   border: 1px solid var(--clr-border);
   border-radius: var(--radius-md);
@@ -383,23 +370,23 @@ ul {
   color: #111;
 }
 
-.cor-card:hover {
+.cor-card:hover{
   transform: translateY(-3px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
 }
 
 /* Faixa colorida no topo do card — usa a variável --cor */
-.cor-swatch {
+.cor-swatch{
   height: 8px;
   background-color: var(--cor);
 }
 
 /* Conteúdo textual do card com padding interno */
-.cor-info {
+.cor-info{
   padding: var(--space-md);
 }
 
-.cor-info h3 {
+.cor-info h3{
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.1rem;
@@ -407,7 +394,7 @@ ul {
   margin-bottom: 0.5rem;
 }
 
-.cor-info p {
+.cor-info p{
   font-size: 0.9rem;
   line-height: 1.65;
   color: #333;
@@ -415,13 +402,13 @@ ul {
 }
 
 /* Tags de uso da cor (ex: CTAs, Alertas) */
-.cor-exemplos {
+.cor-exemplos{
   display: flex;
   gap: 0.4rem;
   flex-wrap: wrap;
 }
 
-.cor-exemplos span {
+.cor-exemplos span{
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.05em;
@@ -438,7 +425,7 @@ ul {
    Bloco informativo com ícone e texto, usado para ressaltar
    dicas ou conceitos importantes dentro das seções.
 */
-.insight-box {
+.insight-box{
   display: flex;
   gap: var(--space-md);
   align-items: flex-start;
@@ -448,19 +435,19 @@ ul {
   padding: var(--space-md) var(--space-lg);
 }
 
-.insight-icon {
+.insight-icon{
   font-size: 1.5rem;
   flex-shrink: 0;
   margin-top: 0.1rem;
 }
 
-.insight-text {
+.insight-text{
   font-size: 0.95rem;
   color: var(--clr-text);
   line-height: 1.7;
 }
 
-.insight-text strong {
+.insight-text strong{
   color: var(--clr-accent);
 }
 
@@ -469,14 +456,14 @@ ul {
    Comparação entre fontes serifadas e sem-serifa, seguida
    da demonstração de hierarquia tipográfica com cinco níveis.
 */
-.section-tipografia {
+.section-tipografia{
   padding: var(--space-2xl) 0;
   border-bottom: 1px solid var(--clr-border);
   background-color: var(--clr-bg-alt);
 }
 
 /* Grade de dois cards lado a lado para comparar fontes */
-.tipo-grid {
+.tipo-grid{
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-md);
@@ -484,7 +471,7 @@ ul {
 }
 
 /* Card individual de tipo com área de demonstração no topo */
-.tipo-card {
+.tipo-card{
   background-color: var(--clr-surface);
   border: 1px solid var(--clr-border);
   border-radius: var(--radius-md);
@@ -492,7 +479,7 @@ ul {
 }
 
 /* Área de prévia visual da fonte */
-.tipo-demo {
+.tipo-demo{
   padding: var(--space-lg) var(--space-md);
   display: flex;
   flex-direction: column;
@@ -503,21 +490,21 @@ ul {
 }
 
 /* Letra grande para demonstração serifada */
-.serif-demo .tipo-letra {
+.serif-demo .tipo-letra{
   font-family: Georgia, 'Times New Roman', serif;
   font-size: 4rem;
   color: var(--clr-text);
 }
 
 /* Letra grande para demonstração sem-serifa */
-.sans-demo .tipo-letra {
+.sans-demo .tipo-letra{
   font-family: var(--font-display);
   font-size: 4rem;
   color: var(--clr-accent);
 }
 
 /* Label do tipo de fonte em maiúsculas */
-.tipo-nome {
+.tipo-nome{
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.12em;
@@ -526,11 +513,11 @@ ul {
 }
 
 /* Descrição textual do card de tipografia */
-.tipo-desc {
+.tipo-desc{
   padding: var(--space-md);
 }
 
-.tipo-desc h3 {
+.tipo-desc h3{
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1rem;
@@ -538,19 +525,19 @@ ul {
   color: var(--clr-text);
 }
 
-.tipo-desc p {
+.tipo-desc p{
   font-size: 0.9rem;
   color: var(--clr-text-muted);
   line-height: 1.65;
   margin-bottom: 0.5rem;
 }
 
-.tipo-desc p:last-child {
+.tipo-desc p:last-child{
   margin-bottom: 0;
 }
 
 /* Bloco de demonstração de hierarquia tipográfica */
-.tipo-hierarquia {
+.tipo-hierarquia{
   background-color: var(--clr-surface);
   border: 1px solid var(--clr-border);
   border-radius: var(--radius-md);
@@ -558,7 +545,7 @@ ul {
   margin-bottom: var(--space-xl);
 }
 
-.tipo-hierarquia h3 {
+.tipo-hierarquia h3{
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.2rem;
@@ -566,20 +553,20 @@ ul {
   color: var(--clr-text);
 }
 
-.tipo-hier-intro {
+.tipo-hier-intro{
   color: var(--clr-text-muted);
   font-size: 0.9rem;
   margin-bottom: var(--space-md);
 }
 
-.hier-exemplos {
+.hier-exemplos{
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
 }
 
 /* Linha de exemplo: tag do nível à esquerda, texto à direita */
-.hier-item {
+.hier-item{
   display: flex;
   align-items: baseline;
   gap: var(--space-md);
@@ -587,12 +574,12 @@ ul {
   border-bottom: 1px solid var(--clr-border);
 }
 
-.hier-item:last-child {
+.hier-item:last-child{
   border-bottom: none;
 }
 
 /* Rótulo do nível tipográfico (ex: "H1 — 48px") */
-.hier-tag {
+.hier-tag{
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.05em;
@@ -602,31 +589,36 @@ ul {
 }
 
 /* Estilos individuais de cada nível tipográfico */
-.h1-ex    { font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; letter-spacing: -0.03em; color: var(--clr-text); }
-.h2-ex    { font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; letter-spacing: -0.02em; color: var(--clr-text); }
-.h3-ex    { font-family: var(--font-display); font-size: 1.2rem; font-weight: 600; color: var(--clr-text); }
-.body-ex  { font-size: 1rem; font-weight: 400; color: var(--clr-text-muted); }
-.caption-ex { font-size: 0.8rem; font-weight: 300; color: var(--clr-text-faint); }
+.h1-ex{ font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; letter-spacing: -0.03em; color: var(--clr-text); 
+}
+.h2-ex{ font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; letter-spacing: -0.02em; color: var(--clr-text); 
+}
+.h3-ex{ font-family: var(--font-display); font-size: 1.2rem; font-weight: 600; color: var(--clr-text); 
+}
+.body-ex{ font-size: 1rem; font-weight: 400; color: var(--clr-text-muted); 
+}
+.caption-ex{ font-size: 0.8rem; font-weight: 300; color: var(--clr-text-faint); 
+}
 
 /*
    SEÇÃO DE HEURÍSTICAS (A.3)
    Grade de 10 cards, um para cada heurística de Nielsen.
    Cada card tem número destacado, título e exemplo prático.
 */
-.section-heuristicas {
+.section-heuristicas{
   padding: var(--space-2xl) 0;
   border-bottom: 1px solid var(--clr-border);
 }
 
 /* Grade responsiva de cards de heurísticas */
-.heuristicas-grid {
+.heuristicas-grid{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   gap: var(--space-md);
 }
 
 /* Card individual com número à esquerda e conteúdo à direita */
-.heuristica-card {
+.heuristica-card{
   background-color: var(--clr-surface);
   border: 1px solid var(--clr-border);
   border-radius: var(--radius-md);
@@ -636,13 +628,13 @@ ul {
   transition: border-color var(--transition), transform var(--transition);
 }
 
-.heuristica-card:hover {
+.heuristica-card:hover{
   border-color: var(--clr-accent-border);
   transform: translateY(-2px);
 }
 
 /* Número da heurística em fonte grande e cor fraca */
-.h-numero {
+.h-numero{
   font-family: var(--font-display);
   font-weight: 800;
   font-size: 2rem;
@@ -654,11 +646,11 @@ ul {
 }
 
 /* Ao passar o mouse, o número acende na cor de destaque */
-.heuristica-card:hover .h-numero {
+.heuristica-card:hover .h-numero{
   color: var(--clr-accent);
 }
 
-.h-body h3 {
+.h-body h3{
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1rem;
@@ -667,7 +659,7 @@ ul {
   line-height: 1.3;
 }
 
-.h-body p {
+.h-body p{
   font-size: 0.88rem;
   color: var(--clr-text-muted);
   line-height: 1.65;
@@ -675,7 +667,7 @@ ul {
 }
 
 /* Bloco de exemplo prático com borda lateral amarela */
-.h-exemplo {
+.h-exemplo{
   font-size: 0.8rem;
   color: var(--clr-accent);
   background-color: var(--clr-accent-dim);
@@ -692,7 +684,7 @@ ul {
 */
 .section-intro.dark .section-label,
 .section-intro.dark .section-title,
-.section-intro.dark .section-lead {
+.section-intro.dark .section-lead{
   color: inherit;
 }
 
@@ -702,22 +694,22 @@ ul {
    grade de auditoria e análise emocional.
 */
 .section-site-ruim,
-.section-site-bom {
+.section-site-bom{
   padding: var(--space-2xl) 0;
   border-bottom: 1px solid var(--clr-border);
 }
 
-.section-site-ruim {
+.section-site-ruim{
   background-color: var(--clr-bg-alt);
 }
 
 /* Cabeçalho do estudo de caso com badge e título grande */
-.case-header {
+.case-header{
   margin-bottom: var(--space-xl);
 }
 
 /* Badge colorida de identificação (Site Ruim / Site Bom) */
-.case-badge {
+.case-badge{
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -730,20 +722,20 @@ ul {
   margin-bottom: var(--space-md);
 }
 
-.case-header.ruim .case-badge {
+.case-header.ruim .case-badge{
   color: var(--clr-ruim);
   background-color: var(--clr-ruim-dim);
   border: 1px solid var(--clr-ruim-border);
 }
 
-.case-header.bom .case-badge {
+.case-header.bom .case-badge{
   color: var(--clr-bom);
   background-color: var(--clr-bom-dim);
   border: 1px solid var(--clr-bom-border);
 }
 
 /* Título do site analisado em fonte grande */
-.case-header h2 {
+.case-header h2{
   font-family: var(--font-display);
   font-weight: 800;
   font-size: clamp(2.5rem, 6vw, 5rem);
@@ -754,7 +746,7 @@ ul {
 }
 
 /* Link externo para o site analisado */
-.case-link {
+.case-link{
   display: inline-block;
   font-size: 0.9rem;
   font-weight: 500;
@@ -762,12 +754,12 @@ ul {
   transition: color var(--transition);
 }
 
-.case-header.ruim .case-link { color: var(--clr-ruim); }
-.case-header.bom  .case-link { color: var(--clr-bom); }
-.case-link:hover { opacity: 0.7; }
+.case-header.ruim .case-link{ color: var(--clr-ruim); }
+.case-header.bom  .case-link{ color: var(--clr-bom); }
+.case-link:hover{ opacity: 0.7; }
 
 /* Descrição curta do site analisado */
-.case-desc {
+.case-desc{
   font-size: 1rem;
   font-weight: 300;
   color: var(--clr-text-muted);
@@ -780,7 +772,7 @@ ul {
    Placeholder visual para inserção de capturas de tela.
    A borda muda de cor conforme o contexto (ruim/bom).
 */
-.screenshot-area {
+.screenshot-area{
   border-radius: var(--radius-md);
   overflow: hidden;
   margin-bottom: var(--space-xl);
@@ -788,13 +780,15 @@ ul {
 }
 
 /* Borda vermelha para o site ruim */
-.ruim-screenshot { border-color: var(--clr-ruim-border); }
+.ruim-screenshot{ border-color: var(--clr-ruim-border); 
+}
 
 /* Borda verde para o site bom */
-.bom-screenshot  { border-color: var(--clr-bom-border); }
+.bom-screenshot  { border-color: var(--clr-bom-border);
+ }
 
 /* Conteúdo centralizado do placeholder */
-.screenshot-placeholder {
+.screenshot-placeholder{
   min-height: 280px;
   display: flex;
   flex-direction: column;
@@ -805,27 +799,27 @@ ul {
   padding: var(--space-xl);
 }
 
-.ruim-screenshot .screenshot-placeholder {
+.ruim-screenshot .screenshot-placeholder{
   background-color: rgba(248, 113, 113, 0.04);
 }
 
-.bom-screenshot .screenshot-placeholder {
+.bom-screenshot .screenshot-placeholder{
   background-color: rgba(52, 211, 153, 0.04);
 }
 
-.screenshot-icon {
+.screenshot-icon{
   font-size: 3rem;
   margin-bottom: 0.5rem;
 }
 
-.screenshot-placeholder p {
+.screenshot-placeholder p{
   font-size: 1rem;
   font-weight: 600;
   color: var(--clr-text-muted);
 }
 
 /* Texto de instrução em itálico e tom mais fraco */
-.screenshot-note {
+.screenshot-note{
   font-size: 0.8rem !important;
   font-weight: 300 !important;
   color: var(--clr-text-faint) !important;
@@ -837,11 +831,11 @@ ul {
    Duas colunas lado a lado: heurísticas violadas vs. atendidas.
    Cada coluna tem cor e estilo próprios para fácil identificação.
 */
-.auditoria-section {
+.auditoria-section{
   margin-bottom: var(--space-xl);
 }
 
-.auditoria-section > h3 {
+.auditoria-section > h3{
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.4rem;
@@ -849,25 +843,28 @@ ul {
   color: var(--clr-text);
 }
 
-.auditoria-grid {
+.auditoria-grid{
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-md);
 }
 
 /* Coluna de auditoria com borda colorida conforme o resultado */
-.auditoria-col {
+.auditoria-col{
   border-radius: var(--radius-md);
   border: 1px solid var(--clr-border);
   overflow: hidden;
 }
 
-.auditoria-col.fail   { border-color: var(--clr-ruim-border); }
-.auditoria-col.pass   { border-color: var(--clr-bom-border); }
-.auditoria-col.neutro { border-color: var(--clr-border); }
+.auditoria-col.fail{ border-color: var(--clr-ruim-border); 
+}
+.auditoria-col.pass{ border-color: var(--clr-bom-border);
+ }
+.auditoria-col.neutro{ border-color: var(--clr-border);
+ }
 
 /* Cabeçalho da coluna com ícone e título colorido */
-.col-header {
+.col-header{
   display: flex;
   align-items: center;
   gap: 0.6rem;
@@ -875,44 +872,53 @@ ul {
   border-bottom: 1px solid var(--clr-border);
 }
 
-.auditoria-col.fail   .col-header { background-color: var(--clr-ruim-dim);   border-color: var(--clr-ruim-border); }
-.auditoria-col.pass   .col-header { background-color: var(--clr-bom-dim);    border-color: var(--clr-bom-border); }
-.auditoria-col.neutro .col-header { background-color: var(--clr-neutro-dim); }
+.auditoria-col.fail   .col-header{ background-color: var(--clr-ruim-dim);   border-color: var(--clr-ruim-border);
+ }
+.auditoria-col.pass   .col-header{ background-color: var(--clr-bom-dim);    border-color: var(--clr-bom-border); 
+}
+.auditoria-col.neutro .col-header{ background-color: var(--clr-neutro-dim);
+ }
 
-.col-icon {
+.col-icon{
   font-size: 1.1rem;
   font-weight: 700;
 }
 
-.auditoria-col.fail   .col-icon { color: var(--clr-ruim); }
-.auditoria-col.pass   .col-icon { color: var(--clr-bom); }
-.auditoria-col.neutro .col-icon { color: var(--clr-neutro); }
+.auditoria-col.fail   .col-icon{ color: var(--clr-ruim); 
+}
+.auditoria-col.pass   .col-icon{ color: var(--clr-bom); 
+}
+.auditoria-col.neutro .col-icon{ color: var(--clr-neutro); 
+}
 
-.col-header h4 {
+.col-header h4{
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 0.9rem;
 }
 
-.auditoria-col.fail   .col-header h4 { color: var(--clr-ruim); }
-.auditoria-col.pass   .col-header h4 { color: var(--clr-bom); }
-.auditoria-col.neutro .col-header h4 { color: var(--clr-neutro); }
+.auditoria-col.fail   .col-header h4{ color: var(--clr-ruim); 
+}
+.auditoria-col.pass   .col-header h4{ color: var(--clr-bom);
+}
+.auditoria-col.neutro .col-header h4{ color: var(--clr-neutro); 
+}
 
 /* Lista de itens da auditoria com espaçamento entre eles */
-.auditoria-list {
+.auditoria-list{
   padding: var(--space-md);
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
 }
 
-.auditoria-list li {
+.auditoria-list li{
   font-size: 0.9rem;
   color: var(--clr-text-muted);
   line-height: 1.65;
 }
 
-.auditoria-list li strong {
+.auditoria-list li strong{
   display: block;
   color: var(--clr-text);
   font-size: 0.85rem;
@@ -924,25 +930,25 @@ ul {
    Bloco de texto que descreve a experiência emocional do
    usuário ao interagir com o site analisado.
 */
-.analise-emocional {
+.analise-emocional{
   border-radius: var(--radius-md);
   padding: var(--space-lg);
   border: 1px solid var(--clr-border);
 }
 
 /* Fundo e borda avermelhados para análise negativa */
-.ruim-emocional {
+.ruim-emocional{
   background-color: var(--clr-ruim-dim);
   border-color: var(--clr-ruim-border);
 }
 
 /* Fundo e borda esverdeados para análise positiva */
-.bom-emocional {
+.bom-emocional{
   background-color: var(--clr-bom-dim);
   border-color: var(--clr-bom-border);
 }
 
-.analise-emocional h3 {
+.analise-emocional h3{
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.1rem;
@@ -950,13 +956,13 @@ ul {
   color: var(--clr-text);
 }
 
-.analise-emocional p {
+.analise-emocional p{
   font-size: 0.95rem;
   line-height: 1.75;
   color: var(--clr-text-muted);
 }
 
-.analise-emocional p strong {
+.analise-emocional p strong{
   color: var(--clr-text);
   font-weight: 600;
 }
@@ -966,31 +972,31 @@ ul {
    Três colunas: identidade do projeto, navegação e equipe.
    Fundo ligeiramente mais claro que o body para separação visual.
 */
-.site-footer {
+.site-footer{
   background-color: var(--clr-surface);
   border-top: 1px solid var(--clr-border);
   padding: var(--space-2xl) 0 var(--space-xl);
 }
 
 /* Grade de três colunas: brand, navegação e equipe */
-.footer-grid {
+.footer-grid{
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   gap: var(--space-xl);
 }
 
-.footer-brand .logo {
+.footer-brand .logo{
   margin-bottom: var(--space-sm);
   font-size: 1.1rem;
 }
 
-.footer-brand p {
+.footer-brand p{
   font-size: 0.88rem;
   color: var(--clr-text-muted);
   line-height: 1.6;
 }
 
-.footer-ano {
+.footer-ano{
   margin-top: 0.5rem;
   font-size: 0.78rem !important;
   color: var(--clr-text-faint) !important;
@@ -998,7 +1004,7 @@ ul {
 
 /* Títulos das colunas do rodapé em maiúsculas e tom muted */
 .footer-nav h4,
-.footer-equipe h4 {
+.footer-equipe h4{
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 0.8rem;
@@ -1010,30 +1016,30 @@ ul {
 
 /* Itens de lista no rodapé */
 .footer-nav ul li,
-.equipe-lista li {
+.equipe-lista li{
   font-size: 0.88rem;
   color: var(--clr-text-faint);
   margin-bottom: 0.5rem;
   line-height: 1.5;
 }
 
-.footer-nav ul li a {
+.footer-nav ul li a{
   color: var(--clr-text-muted);
   transition: color var(--transition);
 }
 
-.footer-nav ul li a:hover {
+.footer-nav ul li a:hover{
   color: var(--clr-accent);
 }
 
 /* Itens da lista de equipe com traço decorativo à esquerda */
-.equipe-lista li {
+.equipe-lista li{
   position: relative;
   padding-left: 1rem;
   color: var(--clr-text-muted);
 }
 
-.equipe-lista li::before {
+.equipe-lista li::before{
   content: "—";
   position: absolute;
   left: 0;
@@ -1045,12 +1051,12 @@ ul {
    fadeUp: aparecimento suave de baixo para cima (usado no hero)
    spin: rotação contínua (usada nos círculos decorativos)
 */
-@keyframes fadeUp {
+@keyframes fadeUp{
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes spin {
+@keyframes spin{
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
 }
@@ -1059,22 +1065,22 @@ ul {
    RESPONSIVO — TABLET (até 900px)
    Ajusta grids de dois para uma coluna e reorganiza o rodapé.
 */
-@media (max-width: 900px) {
-  .tipo-grid {
+@media (max-width: 900px){
+  .tipo-grid{
     grid-template-columns: 1fr;
   }
 
-  .auditoria-grid {
+  .auditoria-grid{
     grid-template-columns: 1fr;
   }
 
-  .footer-grid {
+  .footer-grid{
     grid-template-columns: 1fr 1fr;
     row-gap: var(--space-xl);
   }
 
   /* Brand ocupa largura total no rodapé responsivo */
-  .footer-brand {
+  .footer-brand{
     grid-column: 1 / -1;
   }
 }
@@ -1084,14 +1090,14 @@ ul {
    Esconde o nav normal e exibe o menu hambúrguer.
    Reduz espaçamentos globais para telas pequenas.
 */
-@media (max-width: 700px) {
-  :root {
+@media (max-width: 700px){
+  :root{
     --space-2xl: 4rem;
     --space-3xl: 5rem;
   }
 
   /* Nav mobile: oculto por padrão, exibido com classe .open */
-  .main-nav {
+  .main-nav{
     display: none;
     position: absolute;
     top: 68px;
@@ -1103,48 +1109,48 @@ ul {
     z-index: 99;
   }
 
-  .main-nav.open {
+  .main-nav.open{
     display: block;
   }
 
   /* Links empilhados verticalmente no menu mobile */
-  .main-nav ul {
+  .main-nav ul{
     flex-direction: column;
     align-items: flex-start;
     gap: 0.25rem;
   }
 
-  .main-nav a {
+  .main-nav a{
     display: block;
     width: 100%;
     padding: 0.6rem 0.75rem;
   }
 
   /* Necessário para o posicionamento absoluto do nav aberto */
-  .header-inner {
+  .header-inner{
     position: relative;
   }
 
-  .heuristicas-grid {
+  .heuristicas-grid{
     grid-template-columns: 1fr;
   }
 
-  .footer-grid {
+  .footer-grid{
     grid-template-columns: 1fr;
   }
 
   /* Hierarquia tipográfica empilhada em mobile */
-  .hier-item {
+  .hier-item{
     flex-direction: column;
     gap: 0.3rem;
   }
 
-  .hier-tag {
+  .hier-tag{
     min-width: unset;
   }
 
   /* Decoração do hero ocultada para não poluir telas pequenas */
-  .hero-decoration {
+  .hero-decoration{
     display: none;
   }
 }
@@ -1153,12 +1159,12 @@ ul {
    RESPONSIVO — TELAS MUITO PEQUENAS (até 500px)
    Reduz padding do container e empilha a grade de cores.
 */
-@media (max-width: 500px) {
-  .container {
+@media (max-width: 500px){
+  .container{
     padding: 0 var(--space-md);
   }
 
-  .cores-grid {
+  .cores-grid{
     grid-template-columns: 1fr;
   }
 }
