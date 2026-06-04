@@ -3,7 +3,7 @@
    Zera margens, paddings e define box-sizing para todos os
    elementos, garantindo consistência entre navegadores.
 */
-*, *::before, *::after{
+*, *::before, *::after{ 
   box-sizing: border-box; 
   margin: 0; 
   padding: 0;    
